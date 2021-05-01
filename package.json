@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.js' ",
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch  src/resources/scss --output src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +26,12 @@
     "url": "https://github.com/Mrminhac1/hocnodejs/issues"
   },
   "homepage": "https://github.com/Mrminhac1/hocnodejs#readme",
+  "lint-staged": {
+    "src/**/*.{js,scss,json}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "scripts": {
+    "lint-staged": "husky install"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
