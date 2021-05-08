@@ -6,7 +6,7 @@
   "scripts": {
     "beautiful": "prettier --single-quote --trailing-comma all tab-width 4 --write src/**/*.{js,json,scss}",
     "start": "nodemon --inspect src/index.js",
-    "watch": "node-sass --watch  src/resources/scss --output src/public/css",
+    "watch": "node-sass --watch  src/resources/sass/style.scss --output src/public/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,7 +30,10 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
     "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
     "mongoose": "^5.12.7",
+    "mongoose-delete": "^0.5.3",
+    "mongoose-slug-generator": "^1.0.4",
     "nodemon": "^2.0.7"
   },
   "devDependencies": {
